@@ -76,7 +76,7 @@ if (!getenv('db_class')) {
     putenv('db_dsn=sqlite::memory:');
 }
 
-ConnectionManager::config('test', [
+ConnectionManager::setConfig('test', [
     'className' => 'Cake\Database\Connection',
     'driver' => getenv('db_class'),
     'dsn' => getenv('db_dsn'),
